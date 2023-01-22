@@ -18,12 +18,8 @@ nav {
   padding-top: 0.5em;
 }
 
-.bold {
+strong {
   font-weight: 600;
-}
-
-.light {
-  font-weight: 300;
 }
 
 div.right-nav {
