@@ -10,3 +10,18 @@ nav {
     justify-content: space-between;
     align-items: center;
 };
+
+div.left-nav {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+span.header {
+  font-family: 'Bungee', sans-serif;
+  font-size: xx-large;
+  padding-top: 0.5em;
+}
+
+
+
