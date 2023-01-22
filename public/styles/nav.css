@@ -11,17 +11,34 @@ nav {
     align-items: center;
 };
 
-div.left-nav {
-  display: flex;
-  flex-direction: column;
-  
-}
 
-span.header {
+
+#logo {
   font-family: 'Bungee', sans-serif;
   font-size: xx-large;
   padding-top: 0.5em;
 }
+
+.bold {
+  font-weight: 600;
+}
+
+.light {
+  font-weight: 300;
+}
+
+div.right-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+i {
+  color: #ff0000;
+}
+
+
+
+
 
 
 
