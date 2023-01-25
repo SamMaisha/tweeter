@@ -47,7 +47,7 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id="logo">tweeter</span>
+      <span class="logo">tweeter</span>
       <div class="right-nav">
         <div>
           <span><strong>Write</strong> a new tweet</span>
@@ -60,7 +60,7 @@
 
     <header class="top-header">
       <div>
-        <img class="avatar" src="/images/profile-hex.png" />
+        <img class="header-avatar" src="/images/profile-hex.png" />
       </div>
       <br />
       <div class="username">
@@ -70,6 +70,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Section for creating new tweets -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <div>
@@ -87,6 +88,7 @@
           </form>
         </div>
       </section>
+      <!-- Section for tweet logs -->
       <section id="tweets-container"></section>
     </main>
   </body>
