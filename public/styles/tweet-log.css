@@ -12,25 +12,36 @@ article:hover {
   box-shadow: 10px 10px #9f9a9a;
 }
 
+/* styling that this applied to header and footer in tweet article*/
 .tweet-log-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* styling specific to tweet article header*/
 header.tweet-log-container {
   margin: 0px 10px;
 }
 
+/* styling for username and avatar in header*/
+div.avatar-username {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* styling for handle */
 .user-handle {
   color:#c2b5b5;
 }
 
+/* styling for tweet */
 p {
   margin-left: 20px;
 }
 
-
+/* styling applied to icons in tweet article footer*/
 footer div i {
   color: #450b45;
   padding-right: 0.5em;
@@ -40,7 +51,7 @@ footer div i:hover {
   color: goldenrod;
 }
 
-
+/* styling spefic to tweet article footer */
 footer.tweet-log-container {
   font-size: smaller;
   border-top: thick solid #000000;
