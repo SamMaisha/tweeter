@@ -24,11 +24,17 @@ header.tweet-log-container {
   margin: 0px 10px;
 }
 
+.avatar {
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
 /* styling for username and avatar in header*/
 div.avatar-username {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 /* styling for handle */
