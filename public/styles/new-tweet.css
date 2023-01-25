@@ -16,7 +16,7 @@
   font-family: 'Bungee', sans-serif;
 }
 
-.tweet-textarea {
+#tweet-text {
   height: 30px;
   background-color: transparent;
   border-top: transparent;
