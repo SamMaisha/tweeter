@@ -1,7 +1,7 @@
 article {
   margin: 2em 1.5em 0.5em;
   border: thick solid #000000;
-  padding: 1em;
+  padding: 24px 10px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,15 @@ article {
   justify-content: space-between;
 }
 
-footer.tweet-log-container{
+header.tweet-log-container {
+  margin: 0px 10px;
+}
+
+p {
+  margin-left: 20px;
+}
+
+footer.tweet-log-container {
   font-size: smaller;
   border-top: thick solid #000000;
   padding-top: 10px;
