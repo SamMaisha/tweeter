@@ -1,5 +1,5 @@
 article {
-  margin: 2em 1.5em 0.5em;
+  margin: 2em 0.5em 0.5em;
   border: thick solid #000000;
   padding: 24px 10px;
   height: auto;
@@ -7,6 +7,7 @@ article {
   flex-direction: column;
   align-content: space-around;
 }
+
 
 .tweet-log-container {
   display: flex;
@@ -16,6 +17,10 @@ article {
 
 header.tweet-log-container {
   margin: 0px 10px;
+}
+
+.user-handle {
+  color:#c2b5b5;
 }
 
 p {
