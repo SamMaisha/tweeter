@@ -8,6 +8,7 @@
 /*
 function that takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
 */
+
 const createTweetElement = function (tweetObject) {
   const $tweet = $(`
   <article>
@@ -69,7 +70,7 @@ const data = [
   }
 ]
 
-
+// render data onto tweeter page
 $(document).ready(function () {
   renderTweets(data);
 });
