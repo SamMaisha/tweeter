@@ -12,7 +12,7 @@ nav {
     align-items: center;
 }
 
-#logo {
+.logo {
   font-family: 'Bungee', sans-serif;
   font-size: xxx-large;
   padding-top: 0.5em;
