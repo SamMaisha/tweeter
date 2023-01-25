@@ -8,6 +8,9 @@ article {
   align-content: space-around;
 }
 
+article:hover {
+  box-shadow: 10px 10px #9f9a9a;
+}
 
 .tweet-log-container {
   display: flex;
