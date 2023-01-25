@@ -4,20 +4,20 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+ // takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
 const createTweetElement = function (tweetObject) {
-  // takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
   const $tweet = $(`
   <article>
         <header class="tweet-log-container">
         <div>
-        <img class="avatar" src=${user.avatars} />
+        <img class="avatar" src=${tweetObject.user.avatars} />
         </div>
-          <span>${user.name}</span>
-          <span class="user-handle"><strong>${user.handle}</strong></span>
+          <span>${tweetObject.user.name}</span>
+          <span class="user-handle"><strong>${tweetObject.user.handle}</strong></span>
         </header>
-        <p><strong>${content.text}</strong></p>
+        <p><strong>${tweetObject.content.text}</strong></p>
         <footer class="tweet-log-container">
-          <span>${created_at}</span>
+          <span>${tweetObject.created_at}</span>
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-heart"></i>
@@ -28,3 +28,27 @@ const createTweetElement = function (tweetObject) {
 
   return $tweet;
 };
+
+
+
+const tweetData = {
+  "user": {
+    "name": "Newton",
+    "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+  "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+  "created_at": 1461116232227
+}
+
+$(document).ready(function() {
+  const $tweet = createTweetElement(tweetData);
+
+// Test / driver code (temporary)
+console.log($tweet); // to see what it looks like
+$('#tweets-container').append($tweet);
+  
+});
+
