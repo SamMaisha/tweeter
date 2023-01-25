@@ -30,6 +30,17 @@ p {
   margin-left: 20px;
 }
 
+
+footer div i {
+  color: #450b45;
+  padding-right: 0.5em;
+}
+
+footer div i:hover {
+  color: goldenrod;
+}
+
+
 footer.tweet-log-container {
   font-size: smaller;
   border-top: thick solid #000000;
