@@ -9,10 +9,11 @@ const createTweetElement = function (tweetObject) {
   const $tweet = $(`
   <article>
         <header class="tweet-log-container">
-        <div>
+        <div class="avatar-username">
         <img class="avatar" src=${tweetObject.user.avatars} />
+        <span>${tweetObject.user.name}</span>
         </div>
-          <span>${tweetObject.user.name}</span>
+          
           <span class="user-handle"><strong>${tweetObject.user.handle}</strong></span>
         </header>
         <p><strong>${tweetObject.content.text}</strong></p>
