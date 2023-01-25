@@ -2,4 +2,8 @@ article {
   margin: 2em 1.5em auto;
   border: thick solid #000000;
   padding: 1em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
 }
