@@ -41,23 +41,23 @@ const renderTweets = function (tweetsArray) {
 };
 
 // ajax POST call to handle tweet submission
-const postTweetData = function() {
+const postTweetData = function () {
   $.ajax({
     url: "/tweets",
     type: "POST",
-    data: $('#tweet-form').serialize(),
-    dataType:"json",
+    data: $("#tweet-form").serialize(),
+    dataType: "json",
     success: (data) => {
       console.log(data);
     },
     error: (error) => {
       console.error("an error occured.", error);
     },
-  });  
-}
+  });
+};
 
 // ajax GET call to fetch tweets
-const loadTweets = function() {
+const loadTweets = function () {
   $.ajax({
     url: "/tweets",
     type: "GET",
@@ -68,19 +68,18 @@ const loadTweets = function() {
     },
     error: (error) => {
       console.error("An error occurred, ", error);
-    }
-  })
-}
-
+    },
+  });
+};
 
 $(document).ready(function () {
-// render data onto tweeter page
+  // render data onto tweeter page
   renderTweets(data);
-// fetch tweets
+  // fetch tweets
   loadTweets();
-//handle tweet submit button using ajax
-$('#tweet-form').on('submit', function(event) {
-  event.preventDefault();
-  postTweetData();
-})
+  //handle tweet submit button using ajax
+  $("#tweet-form").on("submit", function (event) {
+    event.preventDefault();
+    postTweetData();
+  });
 });
