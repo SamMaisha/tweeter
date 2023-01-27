@@ -43,17 +43,32 @@ const renderTweets = function (tweetsArray) {
 // ajax POST call to handle tweet submission
 const postTweetData = function() {
   $.ajax({
-    url: "/",
+    url: "/tweets",
     type: "POST",
     data: $('#tweet-form').serialize(),
     dataType:"json",
     success: (data) => {
-      console.log("request was successful, here is the data:", data);
+      console.log(data);
     },
     error: (error) => {
-      console.log("an error occured.", error);
+      console.error("an error occured.", error);
     },
   });  
+}
+
+// ajax GET call to fetch tweets
+const loadTweets = function() {
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
+    dataType: "json",
+    success: (data) => {
+      console.log("the request was successful. Here is the data:", data)
+    },
+    error: (error) => {
+      console.error("There was an error:", error)
+    }
+  })
 }
 
 // Fake data taken from initial-tweets.json
@@ -86,10 +101,11 @@ const data = [
 $(document).ready(function () {
 // render data onto tweeter page
   renderTweets(data);
+// fetch tweets
+  loadTweets();
 //handle tweet submit button using ajax
 $('#tweet-form').on('submit', function(event) {
   event.preventDefault();
-// process form data
-postTweetData();
+  postTweetData();
 })
 });
