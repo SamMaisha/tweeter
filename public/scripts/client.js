@@ -40,6 +40,22 @@ const renderTweets = function (tweetsArray) {
   return;
 };
 
+// ajax POST call to handle tweet submission
+const postTweetData = function() {
+  $.ajax({
+    url: "/",
+    type: "POST",
+    data: $('#tweet-form').serialize(),
+    dataType:"json",
+    success: (data) => {
+      console.log("request was successful, here is the data:", data);
+    },
+    error: (error) => {
+      console.log("an error occured.", error);
+    },
+  });  
+}
+
 // Fake data taken from initial-tweets.json
 const data = [
   {
@@ -73,7 +89,7 @@ $(document).ready(function () {
 //handle tweet submit button using ajax
 $('#tweet-form').on('submit', function(event) {
   event.preventDefault();
-  console.log($(this).serialize());
+// process form data
+postTweetData();
 })
-
 });
