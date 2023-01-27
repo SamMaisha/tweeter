@@ -19,7 +19,7 @@ const createTweetElement = function (tweetObject) {
     </header>
     <p><strong>${tweetObject.content.text}</strong></p>
     <footer class="tweet-log-container">
-      <span>${tweetObject.created_at}</span>
+      <time class="timeago" datetime= "2016-06-30 09:20:00">${tweetObject.created_at}</time>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-heart"></i>
@@ -73,8 +73,6 @@ const loadTweets = function () {
 };
 
 $(document).ready(function () {
-  // render data onto tweeter page
-  renderTweets(data);
   // fetch tweets
   loadTweets();
   //handle tweet submit button using ajax
