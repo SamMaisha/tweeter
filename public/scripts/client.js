@@ -71,9 +71,9 @@ $(document).ready(function () {
 // render data onto tweeter page
   renderTweets(data);
 //handle tweet submit button using ajax
-$('#tweet-submit-button').on('submit', function(event) {
+$('#tweet-form').on('submit', function(event) {
   event.preventDefault();
-
+  console.log($(this).serialize());
 })
 
 });
