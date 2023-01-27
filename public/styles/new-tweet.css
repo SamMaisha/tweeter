@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.tweet-form {
+#tweet-form {
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@
   border-bottom-width: thick;
 }
 
-#tweet-submit-button {
+.tweet-submit-button {
   background-color: #4056A1;
   color: #FFFFFF;
 }
