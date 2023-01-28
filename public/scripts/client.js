@@ -86,20 +86,30 @@ const loadTweets = function () {
 };
 
 $(document).ready(function () {
+  // hide tweets by defualt when page is loaded
+  $(".error-msg").hide();
+  $(".error-exceeded-char-limit").hide();
+  $(".error-empty-tweet").hide();
   // fetch tweets
   loadTweets();
   //handle tweet submit button using ajax
   $("#tweet-form").on("submit", function (event) {
+    // hide tweets on submission of form
+    $(".error-msg").hide();
+    $(".error-exceeded-char-limit").hide();
+    $(".error-empty-tweet").hide();
     event.preventDefault();
     const tweet = $('#tweet-text').val();
     if (!tweet) {
-      alert("Error! There are no characters in this tweet! Please enter valid characters to send out a  tweet 🐦")
+      $(".error-msg").slideDown();
+      $(".error-empty-tweet").slideDown();
       return;
     };
     if (tweet.length > 140) {
-      alert("Your tweet has exceeded the character limit!")
+      $(".error-msg").slideDown();
+      $(".error-exceeded-char-limit").slideDown();
       return;
     }
-    postTweetData();
+    postTweetData();   
   });
 });
