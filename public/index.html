@@ -81,6 +81,16 @@
       <!-- Section for creating new tweets -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div class="error-msg">
+          <p class="error-char-limit">
+            ⚠️ Oops! This post has exceeded the 140 character limit. Please
+            limit tweets to 140 characters or less ⚠️
+          </p>
+          <p class="error-empty-tweet">
+            ⚠️ Oops! This tweet does not contain any characters. Please type
+            something you would like to post ⚠️
+          </p>
+        </div>
         <div>
           <form id="tweet-form" action="/tweets/" method="POST">
             <label class="tweet-prompt" for="tweet-text"
