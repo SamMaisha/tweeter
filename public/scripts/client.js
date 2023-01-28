@@ -49,6 +49,7 @@ const postTweetData = function () {
     // dataType: "json",
     success: () => {
       console.log("Your tweet was posted successfully");
+      $('#tweet-text').val("");
     },
     error: (error) => {
       console.error("an error occured.", error);
