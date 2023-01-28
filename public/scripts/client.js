@@ -4,22 +4,33 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// function to escape text to prevent cross-site scripting
+const escapeText = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML
+}
 /*
 function that takes in a tweet object and is responsible for returning a tweet <article> element containing the entire HTML structure of the tweet
 */
 const createTweetElement = function (tweetObject) {
+  const userAvatar = tweetObject.user.avatars;
+  const username = tweetObject.user.name;
+  const userHandle = tweetObject.user.handle;
+  const textFromUser = tweetObject.content.text;
+  const timestamp = tweetObject.created_at;
   const $tweet = $(`
   <article>
     <header class="tweet-log-container">
     <div class="avatar-username">
-    <img class="avatar" src=${tweetObject.user.avatars} />
-    <span>${tweetObject.user.name}</span>
+    <img class="avatar" src=${userAvatar} />
+    <span>${username}</span>
     </div>
-      <span class="user-handle"><strong>${tweetObject.user.handle}</strong></span>
+      <span class="user-handle"><strong>${userHandle}</strong></span>
     </header>
-    <p><strong>${tweetObject.content.text}</strong></p>
+    <p>${escapeText(textFromUser)}</p>
     <footer class="tweet-log-container">
-      <time>${$.timeago(tweetObject.created_at)}</time>
+      <time>${$.timeago(timestamp)}</time>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-heart"></i>
