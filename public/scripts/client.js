@@ -50,6 +50,8 @@ const postTweetData = function () {
     success: () => {
       console.log("Your tweet was posted successfully");
       $('#tweet-text').val("");
+      $('#tweets-container').empty();
+      loadTweets();
     },
     error: (error) => {
       console.error("an error occured.", error);
