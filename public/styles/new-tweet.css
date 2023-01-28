@@ -33,3 +33,9 @@
 .counter-warning {
   color: #ff0000;
 }
+
+.error-msg {
+  color: #ff0000;
+  border: thick solid #ff0000;
+  text-align: center;
+}
