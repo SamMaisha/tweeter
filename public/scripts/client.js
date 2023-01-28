@@ -19,7 +19,7 @@ const createTweetElement = function (tweetObject) {
     </header>
     <p><strong>${tweetObject.content.text}</strong></p>
     <footer class="tweet-log-container">
-      <time class="timeago" datetime= "2016-06-30 09:20:00">${tweetObject.created_at}</time>
+      <time>${$.timeago(tweetObject.created_at)}</time>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-heart"></i>
@@ -46,9 +46,9 @@ const postTweetData = function () {
     url: "/tweets",
     type: "POST",
     data: $("#tweet-form").serialize(),
-    dataType: "json",
-    success: (data) => {
-      console.log(data);
+    // dataType: "json",
+    success: () => {
+      console.log("Your tweet was posted successfully");
     },
     error: (error) => {
       console.error("an error occured.", error);
@@ -63,7 +63,6 @@ const loadTweets = function () {
     type: "GET",
     dataType: "json",
     success: (data) => {
-      console.log("The request was successful, and here is the data:", data);
       renderTweets(data);
     },
     error: (error) => {
@@ -78,6 +77,15 @@ $(document).ready(function () {
   //handle tweet submit button using ajax
   $("#tweet-form").on("submit", function (event) {
     event.preventDefault();
+    const tweet = $('#tweet-text').val();
+    if (!tweet) {
+      alert("Error! There are no characters in this tweet! Please enter valid characters to send out a  tweet 🐦")
+      return;
+    };
+    if (tweet.length > 140) {
+      alert("Your tweet has exceeded the character limit!")
+      return;
+    }
     postTweetData();
   });
 });
