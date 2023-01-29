@@ -57,7 +57,6 @@ const postTweetData = function () {
     url: "/tweets",
     type: "POST",
     data: $("#tweet-form").serialize(),
-    // dataType: "json",
     success: () => {
       console.log("Your tweet was posted successfully");
       $('#tweet-text').val("");
@@ -88,26 +87,20 @@ const loadTweets = function () {
 $(document).ready(function () {
   // hide tweets by defualt when page is loaded
   $(".error-msg").hide();
-  $(".error-exceeded-char-limit").hide();
-  $(".error-empty-tweet").hide();
   // fetch tweets
   loadTweets();
   //handle tweet submit button using ajax
   $("#tweet-form").on("submit", function (event) {
     // hide tweets on submission of form
     $(".error-msg").hide();
-    $(".error-exceeded-char-limit").hide();
-    $(".error-empty-tweet").hide();
     event.preventDefault();
     const tweet = $('#tweet-text').val();
     if (!tweet) {
-      $(".error-msg").slideDown();
-      $(".error-empty-tweet").slideDown();
+      $(".error-msg").text('⚠️ Oops! This tweet does not contain any characters. Please type something you would like to post ⚠️').slideDown();
       return;
     };
     if (tweet.length > 140) {
-      $(".error-msg").slideDown();
-      $(".error-exceeded-char-limit").slideDown();
+      $(".error-msg").text('⚠️ Oops! This post has exceeded the 140 character limit. Please limit tweets to 140 characters or less ⚠️').slideDown();
       return;
     }
     postTweetData();   
