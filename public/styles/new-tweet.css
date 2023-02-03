@@ -17,7 +17,8 @@
 }
 
 #tweet-text {
-  height: 30px;
+  height: 40px;
+  resize: none;
   background-color: transparent;
   border-top: transparent;
   border-left: transparent;
