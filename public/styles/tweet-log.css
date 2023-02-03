@@ -1,3 +1,7 @@
+/*
+ * Tweet Log
+ */
+
 /* styling or tweet article */
 article {
   margin: 2em 0.5em 0.5em;
@@ -48,7 +52,7 @@ p {
   margin-left: 20px;
 }
 
-/* styling applied to icons in tweet article footer*/
+/* styling applied to font awesome icons in tweet article footer*/
 footer div i {
   color: #450b45;
   padding-right: 0.5em;
