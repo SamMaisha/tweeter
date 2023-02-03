@@ -10,16 +10,16 @@
   }
   header.top-header {
     margin-top: 300px;
-    margin-right: 3em;
-    max-width: 670px;
-    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 750px;
+    margin-left: 50px;
     border: thick solid black;
    
   }
   main.container {
     margin-top: 200px;
-    max-width: 600px;  
-    margin-right: 40px
+    max-width: 820px;  
+    margin-right: 50px;
   }
 
 }
