@@ -2,18 +2,20 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweet your thoughts, opinions and secrets. It's like an online diary where you can say whatever you want!
+
+What are you waiting for - tweet away!
 
 ## Features
 
--
--
--
+- Header with profile picture and username
+- History of previous tweets
+- Ability to write tweets
 
 ## Final Product
 
-!["Screenshot of register page"](https://github.com/SamMaisha/tinyapp/blob/master/docs/register-page.png)
-!["Screenshot or urls page"](https://github.com/SamMaisha/tinyapp/blob/master/docs/urls-page.png)
+!["tweeter-1040px"](https://github.com/SamMaisha/tweeter/blob/master/docs/images/tweeter-1040px.png?raw=true)
+!["tweeter-999px"](https://github.com/SamMaisha/tweeter/blob/master/docs/images/tweeter-999px.png?raw=true)
 
 ## Getting Started
 
