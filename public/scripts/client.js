@@ -51,6 +51,7 @@ const renderTweets = function (tweetsArray) {
   return;
 };
 
+
 // ajax POST call to handle tweet submission
 const postTweetData = function () {
   $.ajax({
@@ -86,8 +87,6 @@ const loadTweets = function () {
 };
 
 $(document).ready(function () {
-  // hide tweets by defualt when page is loaded
-  $(".error-msg").hide();
   // fetch tweets
   loadTweets();
   //handle tweet submit button using ajax
@@ -96,10 +95,12 @@ $(document).ready(function () {
     $(".error-msg").hide();
     event.preventDefault();
     const tweet = $('#tweet-text').val();
+    // show error message if tweet is empty or null
     if (!tweet) {
       $(".error-msg").text('⚠️ Oops! This tweet does not contain any characters. Please type something you would like to post ⚠️').slideDown();
       return;
     };
+    // show error message if tweet has exceeded character limit
     if (tweet.length > 140) {
       $(".error-msg").text('⚠️ Oops! This post has exceeded the 140 character limit. Please limit tweets to 140 characters or less ⚠️').slideDown();
       return;
