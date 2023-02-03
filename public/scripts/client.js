@@ -46,7 +46,7 @@ const createTweetElement = function (tweetObject) {
 const renderTweets = function (tweetsArray) {
   for (tweet of tweetsArray) {
     const tweetElement = createTweetElement(tweet);
-    $("#tweets-container").append(tweetElement);
+    $("#tweets-container").prepend(tweetElement);
   }
   return;
 };
@@ -60,6 +60,7 @@ const postTweetData = function () {
     success: () => {
       console.log("Your tweet was posted successfully");
       $('#tweet-text').val("");
+      $('.counter').text(140);
       $('#tweets-container').empty();
       loadTweets();
     },
