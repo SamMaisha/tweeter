@@ -1,3 +1,7 @@
+/*
+ * Styling for main header with username and user avatar
+ */
+ 
 header.top-header {
   height: 520px;
   width: 100%;
@@ -7,6 +11,7 @@ header.top-header {
   justify-content: center;
   background-color: #b38600;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
 }
 
 .header-avatar {
