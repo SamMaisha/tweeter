@@ -1,3 +1,8 @@
+/*
+ * Styling for tweet form
+ */
+ 
+/* section containing tweet form, counter and submit button */
 .new-tweet {
   display: flex;
   flex-direction: column;
@@ -8,6 +13,7 @@
   flex-direction: column;
 }
 
+/* div containing counter and submit button*/
 .tweet-form-bottom {
   display: flex;
   flex-direction: row;
@@ -16,6 +22,7 @@
   font-family: 'Bungee', sans-serif;
 }
 
+/*text box for writing tweets*/
 #tweet-text {
   height: 40px;
   resize: none;
