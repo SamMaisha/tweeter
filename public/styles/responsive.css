@@ -8,15 +8,18 @@
     background-color: #3b0ca1;
     background-image: none;
   }
-  header {
+  header.top-header {
     margin-top: 300px;
-    margin-right: 5em;
+    margin-right: 3em;
     max-width: 670px;
-    margin: auto;
+    margin-left: 40px;
+    border: thick solid black;
+   
   }
   main.container {
     margin-top: 200px;
-    max-width: 600px;
+    max-width: 600px;  
+    margin-right: 40px
   }
 
 }
