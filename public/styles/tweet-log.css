@@ -1,3 +1,4 @@
+/* styling or tweet article */
 article {
   margin: 2em 0.5em 0.5em;
   border: thick solid #000000;
@@ -66,4 +67,6 @@ footer.tweet-log-container {
   padding-right:15px;
   margin-top: 10px;
 }
+
+
 
